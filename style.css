@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Navigation */
+
+#topbar {
+  width: 100%;
+  box-shadow: 0 2px 5px #ccc;
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8%;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 2px 5px #ccc;
+  min-width: 320px;
+  min-height: 50vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding: 20px 8%;
+  transform: translateX(-100%) translateY(55px);
+  transition: transform 200ms;
+}
+.sidebar-active {
+  transform: translateX(0%);
+  transform: translateY(55px);
+}
+#search-wrapper-hidden {
+  margin-bottom: 25px;
+}
+.sidebar > a {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+hr {
+  margin-bottom: 20px;
+}
+#left-section {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+#bars {
+  display: none;
+  cursor: pointer;
+}
+#bars div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(27, 25, 25);
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+#logo {
+  font-size: 36px;
+  font-weight: 400;
+  margin-right: 16px;
+}
+#logo > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+#logo span {
+  font-weight: 800;
+}
+#left-section > a {
+  text-decoration: none;
+  color: black;
+  margin-left: 32px;
+  font-weight: 600;
+}
+#search-wrapper,
+#search-wrapper-hidden {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+#search-wrapper > i,
+#search-wrapper-hidden > i {
+  position: absolute;
+  color: #999;
+  font-size: 18px;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+}
+#search-box,
+#search-hidden {
+  width: 100%;
+  border: 1px solid rgb(245, 242, 242);
+  background-color: rgb(245, 242, 242);
+  box-sizing: border-box;
+  padding: 10px 24px 8px 48px;
+  color: black;
+  outline: none;
+}
+#right-section {
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+}
+#cart-wrapper {
+  position: relative;
+  margin-right: 32px;
+}
+#cart-count {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  background-color: #009688;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+#cart-wrapper > a {
+  text-decoration: none;
+  color: black;
+}
+#right-section > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Body */
+
+main {
+  width: 100%;
+  min-height: 80vh;
+  margin-top: 100px;
+  padding-bottom: 8%;
+}
+
+/* Slick */
+
+.slick-slide {
+  width: 100%;
+  margin: 0 80px;
+}
+
+.slick-dots {
+  list-style-type: none;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots button {
+  display: inline-block;
+  font-size: 0px;
+  color: #ccc;
+  background-color: #ccc;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0;
+  margin-left: 6px;
+  margin-right: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-active button {
+  background-color: #aaa;
+}
+
+/* Clothing and Accessories Section */
+
+.homepage-section {
+  padding: 4% 8% 0;
+}
+.section-heading {
+  font-size: 28px;
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 28px 0;
+}
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.product-card {
+  width: 100%;
+  max-width: 19%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px #ccc;
+  border-radius: 5px;
+}
+.product-card > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.product-image {
+  width: 100%;
+}
+.product-details {
+  box-sizing: border-box;
+  padding: 16px;
+}
+.product-details > h4 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
+}
+.product-details > h5 {
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 0;
+  margin-top: 12px;
+}
+.product-details > p {
+  margin: 0;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #009688;
+}
+#edyoda-projects-logo {
+  width: 128px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+footer {
+  width: 100%;
+  background-color: #1c1b1e;
+  display: flex;
+  justify-content: center;
+  padding: 4% 8%;
+}
+footer > div:first-of-type {
+  padding-left: 0;
+}
+footer > div {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.footer-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  margin: 16px 0;
+}
+.footer-link {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-top: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  opacity: 0.8;
+}
+@media screen and (max-width: 500px) {
+  main {
+    padding: 0 20px;
+  }
+  #topbar {
+    padding: 10px 4%;
+  }
+  #left-section > a {
+    display: none;
+  }
+  #search-wrapper {
+    display: none;
+  }
+  #logo {
+    font-size: 26px;
+  }
+  #right-section > img {
+    width: 25px;
+    height: 25px;
+  }
+  #cart-wrapper {
+    margin-right: 20px;
+  }
+  #cart-wrapper > a {
+    font-size: 15px;
+  }
+  #cart-count {
+    width: 12px;
+    height: 12px;
+    top: -6px;
+    right: -8px;
+    font-size: 8px;
+  }
+  #bars {
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    margin-right: 5px;
+  }
+  .sidebar {
+    display: flex;
+    width: 200px;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  .slick-dots {
+    display: none;
+  }
+  .slick-slide {
+    max-width: 450px;
+    margin: 0;
+  }
+  .slick-dots button {
+    display: none;
+  }
+  .product-card {
+    max-width: 80%;
+    margin-left: 3%;
+  }
+  #edyoda-projects-logo {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer > div {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+}
